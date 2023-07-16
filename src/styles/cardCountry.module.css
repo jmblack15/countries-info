@@ -1,0 +1,36 @@
+.card {
+  width: 75vw;
+  background-color: var(--Dark-Mode-Text);
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.flag {
+  height: 180px;
+  background-color: black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.container_info {
+  padding: 20px 30px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.container_info>h2 {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.container_info li {
+  display: flex;
+  gap: 5px;
+}
+
+.container_info li>p:first-child {
+  font-weight: 600;
+}

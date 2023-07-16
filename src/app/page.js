@@ -5,16 +5,16 @@ import styles from '../styles/page.module.css';
 export default async function Home() {
   const countries = await getCountries();
   return (
-    <>
+    <main className={styles.main}>
       {countries.map(country => (
         <CardCountry
-          key={country.name.common}
+          key={country.name.common} 
           name={country.name.common}
           popularion={country.population}
           region={country.region}
           capital={country.capital}
         />
       ))}
-    </>
+    </main>
   )
 }
