@@ -8,6 +8,7 @@ import Image from "next/image"
 const CardWrapper = ({ countries }) => {
 
   const [searchCountry, setSearchCountry] = useState('')
+  const [filterRegion, setFilterRegion] = useState('')
   let listSearchedCountry = []
 
   if (searchCountry.length > 0) {
@@ -20,10 +21,12 @@ const CardWrapper = ({ countries }) => {
     listSearchedCountry = countries
   }
 
+  listSearchedCountry = listSearchedCountry.filter(country => country.region === filterRegion || filterRegion === '')
+
   return (
     <section className={styles.container}>
 
-      <div>
+      <div className={styles.search_container}>
         <div className={styles.search}>
           <Image
             src='/search.png'
@@ -39,6 +42,17 @@ const CardWrapper = ({ countries }) => {
             onChange={(e) => setSearchCountry(e.target.value)}
           />
         </div>
+
+        <select
+          onChange={(e) => setFilterRegion(e.target.value)}
+        >
+          <option value="">All</option>
+          <option value="Africa">Africa</option>
+          <option value="Americas">Americas</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
+        </select>
       </div>
 
       {listSearchedCountry.map(contry => (

@@ -6,7 +6,7 @@ const CardCountry = ({ info }) => {
 
   return (
     <Link href='' className={styles.card}>
-      <Image src={info.flags.svg} alt={info.flags.alt} width={320} height={180} />
+      <Image src={info.flags.svg} alt={info.flags.alt ? info.flags.alt : 'flag'} width={320} height={180} />
       <div className={styles.container_info}>
         <h2>{info.name.common}</h2>
         <ul>
