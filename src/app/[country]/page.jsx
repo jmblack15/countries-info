@@ -1,8 +1,8 @@
 export default function DetailPage({ params }) {
 
-  const { name } = params
+  const { country } = params
 
   return (
-    <h1>{name} country</h1>
+    <h1>{country} country</h1>
   )
 }
