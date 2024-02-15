@@ -55,12 +55,14 @@ const CardWrapper = ({ countries }) => {
         </select>
       </div>
 
-      {listSearchedCountry.map(contry => (
-        <CardCountry
-          key={contry.name.common}
-          info={contry}
-        />
-      ))}
+      <div className={styles.card_wrapper}>
+        {listSearchedCountry.map(contry => (
+          <CardCountry
+            key={contry.name.common}
+            info={contry}
+          />
+        ))}
+      </div>
     </section>
   )
 }

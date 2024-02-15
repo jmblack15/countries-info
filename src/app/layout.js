@@ -17,13 +17,16 @@ export default function RootLayout({ children }) {
     <html className={Nunito.className} lang="en">
       <body>
         <header>
-          <h2>Where in the world?</h2>
-          <ul className='button_dark_mode'>
-            <li>
-              <Image src='/moon.svg' height={16} width={16} alt='icon' />
-              <p>Dark Mode</p>
-            </li>
-          </ul>
+          <div>
+            <h2>Where in the world?</h2>
+            <ul className='button_dark_mode'>
+              <li>
+                <Image src='/moon.svg' height={16} width={16} alt='icon' />
+                <p>Dark Mode</p>
+              </li>
+            </ul>
+          </div>
+
         </header>
         {children}
       </body>
