@@ -1,0 +1,18 @@
+.section {
+  min-height: 100vh;
+}
+
+.button_back {
+  height: 40px;
+  width: 100px;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 4px 5px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 4px 5px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 4px 5px -2px rgba(0, 0, 0, 0.75);
+  display: flex;
+  margin-top: 20px;
+  margin-left: 20px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--Dark-Mode-Text);
+}
